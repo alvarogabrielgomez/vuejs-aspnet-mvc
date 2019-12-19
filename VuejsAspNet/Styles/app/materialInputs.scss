@@ -1,0 +1,231 @@
+﻿/*COMBO*/
+.material-group-combo {
+    position: relative;
+    padding-top: 12px;
+}
+.material-combo {
+    width: 100%;
+    border-radius: 4px;
+    font-size: 15px;
+    padding: 8px 10px 7px 9px;
+    display: block;
+    height: 39px;
+    border: 1px solid #cacaca;
+    border-bottom-color: #d2d2d2;
+    transition: all .2s ease;
+}
+/* LABEL ======================================= */
+.material-combo-label {
+    padding: 0px 5px;
+    color: #676767;
+    font-size: 13px;
+    font-weight: normal;
+    position: absolute;
+    pointer-events: none;
+    left: 10px;
+    top: 24px;
+    transition: 0.15s ease all;
+    -moz-transition: 0.15s ease all;
+    -webkit-transition: 0.15s ease all;
+    background-color: #fff;
+    outline: none;
+}
+
+.material-combo-label:focus {
+    border: 1px solid $highlight-input-color;
+    transition: 0.2s ease all;
+    box-shadow: inset 0px 0 0 1px $highlight-input-color;
+    outline: none;
+}
+
+.material-combo:focus ~ .material-combo-label {
+    color: $highlight-input-color;
+}
+
+.material-combo:focus ~ .material-combo-label, .material-combo:valid ~ .material-combo-label {
+    top: 2px;
+    left: 7px;
+    font-size: 13px;
+}
+
+/* form starting stylings ------------------------------- */
+.input-lite {
+    .material-input {
+        height: 38px !important;
+    }
+
+    .material-input:focus ~ .material-input-label, .material-input:valid ~ .material-input-label {
+        top: 2px !important;
+    }
+
+    .material-input-label {
+        top: 23px !important;
+        font-size: 14px !important;
+    }
+}
+
+.material-group-input {
+    position: relative;
+    padding-top: 12px;
+}
+
+.material-input {
+    width: 100%;
+    border-radius: 4px;
+    font-size: 15px;
+    padding: 14px 10px 14px 14px;
+    display: block;
+    border: 1px solid #cacaca;
+    border-bottom: 1px solid rgb(210, 210, 210);
+    transition: 0.2s ease all;
+}
+
+/* LABEL ======================================= */
+.material-input-label {
+    padding: 0px 5px;
+    color: #676767;
+    font-size: 15px;
+    font-weight: normal;
+    position: absolute;
+    pointer-events: none;
+    left: 10px;
+    top: 27px;
+    transition: 0.15s ease all;
+    -moz-transition: 0.15s ease all;
+    -webkit-transition: 0.15s ease all;
+    background-color: #fff;
+    outline: none;
+}
+
+/* active state */
+
+
+.material-input-label:focus {
+    border: 1px solid $highlight-input-color;
+    transition: 0.2s ease all;
+    box-shadow: inset 0px 0 0 1px $highlight-input-color;
+    outline: none;
+}
+
+.material-input:focus ~ .material-input-label {
+    color: $highlight-input-color;
+}
+
+.material-input:focus ~ .material-input-label, .material-input:valid ~ .material-input-label {
+    top: 2px;
+    left: 7px;
+    font-size: 13px;
+}
+
+/* BOTTOM BARS ================================= */
+/*.material-input-bar {
+    position: relative;
+    display: block;
+    width: 300px;
+}
+
+.material-input-bar:before, .material-input-bar:after {
+    content: '';
+    height: 2px;
+    width: 0;
+    bottom: 1px;
+    position: absolute;
+    background: #5264AE;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+}
+
+.material-input-bar:before {
+    left: 50%;
+}
+
+.material-input-bar:after {
+    right: 50%;
+}*/
+
+/* active state */
+.material-input:focus ~ .material-input-bar:before, .material-input:focus ~ .material-input-bar:after {
+    width: 50%;
+}
+
+/* HIGHLIGHTER ================================== */
+.material-input-highlight {
+    position: absolute;
+    height: 60%;
+    width: 100px;
+    border-radius: 2px;
+    top: 29%;
+    left: 11px;
+    pointer-events: none;
+    opacity: 0.5;
+    z-index: 10;
+}
+
+/* active state */
+.material-input:focus ~ .material-input-highlight {
+    -webkit-animation: inputHighlighter 0.3s ease;
+    -moz-animation: inputHighlighter 0.3s ease;
+    animation: inputHighlighter 0.3s ease;
+}
+/* ANIMATIONS ================ */
+@-webkit-keyframes inputHighlighter {
+    from {
+        background: #5264AE;
+    }
+
+    to {
+        width: 0;
+        background: transparent;
+    }
+}
+
+@-moz-keyframes inputHighlighter {
+    from {
+        background: #5264AE;
+    }
+
+    to {
+        width: 0;
+        background: transparent;
+    }
+}
+
+@keyframes inputHighlighter {
+    from {
+        background: #5264AE;
+    }
+
+    to {
+        width: 0;
+        background: transparent;
+    }
+}
+
+
+.disabled > .material-input {
+    background-color: #e4e4e4;
+    pointer-events: none;
+}
+.disabled > .material-input-label {
+    background-color: transparent;
+}
+
+/*.disabled > .material-input:focus ~ .material-input-label, .material-input:valid ~ .material-input-label {
+    visibility:hidden;
+}*/
+
+.is-invalid > .material-input {
+        border: 1px solid $invalid-color!important;
+        outline:none;
+}
+
+.is-invalid > .material-input:focus {
+    box-shadow: inset 0 0 0 1px $invalid-color !important;
+}
+
+.is-invalid > .material-input-label {
+    color: $invalid-color !important;
+}
+
+

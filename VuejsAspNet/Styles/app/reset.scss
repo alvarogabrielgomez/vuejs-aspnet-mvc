@@ -1,0 +1,57 @@
+﻿* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+}
+main {
+    display: block;
+}
+h1 {
+    font-size: 2em;
+    margin: 0.67em 0;
+}
+pre {
+    font-family: monospace, monospace; /* 1 */
+    font-size: 1em; /* 2 */
+}
+a {
+    background-color: transparent;
+    text-decoration: none;
+}
+abbr[title] {
+    border-bottom: none; /* 1 */
+    text-decoration: underline; /* 2 */
+    text-decoration: underline dotted; /* 2 */
+}
+img {
+    border-style: none;
+}
+button,
+input,
+optgroup,
+select,
+textarea {
+    font-family: inherit; /* 1 */
+    font-size: 100%; /* 1 */
+    line-height: 1.15; /* 1 */
+    margin: 0; /* 2 */
+}
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+    -webkit-appearance: button;
+}
+fieldset {
+    padding: 0.35em 0.75em 0.625em;
+}
+textarea {
+  overflow: auto;
+}
+[hidden] {
+    display: none;
+}
+div {
+    box-sizing: border-box;
+}

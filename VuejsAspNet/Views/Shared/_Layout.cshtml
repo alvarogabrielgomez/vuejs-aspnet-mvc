@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - VuejsAspNet</title>
+    <link rel="stylesheet" type="text/css" href="@Url.Content("~/bundle/app.css")" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/fontawesome.css" integrity="sha384-WK8BzK0mpgOdhCxq86nInFqSWLzR5UAsNg0MGX9aDaIIrFWQ38dGdhwnNCAoXFxL" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/regular.css" integrity="sha384-l+NpTtA08hNNeMp0aMBg/cqPh507w3OvQSRoGnHcVoDCS9OtgxqgR7u8mLQv8poF" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/solid.css" integrity="sha384-aj0h5DVQ8jfwc8DA7JiM+Dysv7z+qYrFYZR+Qd/TwnmpDI6UaB3GJRRTdY8jYGS4" crossorigin="anonymous">
+</head>
+<body id="VuejsAspNet-body">
+    <script>
+        function closeSnackBar() {
+            var msgwindow = document.getElementById('snackbar');
+            msgwindow.style.transform = 'translateY(100px)';
+            msgwindow.style.opacity = "0";
+            msgwindow.querySelector('.snackbarprogressbar').style.transitionDelay = '100ms';
+            msgwindow.querySelector('.snackbarprogressbar').style.transitionDuration = '0ms';
+            msgwindow.querySelector('.snackbarprogressbar').style.width = '0%';
+        };
+    </script>
+    <div class="shadow" id="snackbar">
+        <div class="snackbarprogressbar"></div>
+        <label class="title" for="titles">Title</label>
+        <label class="content" for="Content">Lorem ipsum dolor sit amet</label>
+        <button onclick="closeSnackBar()" class="snackbar-btn-action">Cerrar</button>
+    </div>
+    <main id="main">
+
+        @RenderBody()
+    </main>
+
+    <footer></footer>
+
+
+
+    <script src="@Url.Content("~/bundle/app.js")" defer></script>
+
+    @RenderSection("scripts", false)
+
+</body>
+
+</html>

@@ -1,0 +1,21 @@
+﻿@media only screen and (max-width: 969px) {
+    #card-rows-container {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .card {
+        margin: 16px;
+        height: auto;
+    }
+
+    .card-content {
+        margin-bottom: 16px !important;
+    }
+
+    #comprobante-container {
+        width: calc(100% - 45px);
+    }
+}
+
+

@@ -1,0 +1,62 @@
+﻿.button {
+    border-radius: 50px;
+    background-color: $button-base-color;
+    border: none;
+    color: white;
+    padding: 12px 39px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    height: auto;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 4px 0px rgba(209, 209, 209, 1);
+    cursor: pointer;
+}
+
+.red {
+    background-color: $red !important;
+    transition: all 0.4s ease;
+    box-shadow: 0px 1px 2px 0px rgba(128,128,128,.49) !important;
+    border: 1px solid $red;
+
+    &:hover {
+        background-color: $light-red !important;
+        transition: all 0.4s ease;
+        box-shadow: 0px 0px 4px 0px rgb(184, 184, 184) !important;
+    }
+
+    a {
+        color: #fff;
+    }
+}
+
+.blue {
+    background-color: $blue !important;
+}
+
+.l-grey {
+    background-color: #fbfbf2 !important;
+    border: 1px solid #bc2d1942;
+    transition: all 0.4s ease;
+    box-shadow: 0px 1px 2px 0px rgba(128,128,128,.49) !important;
+
+    a {
+        color: #424242 !important;
+    }
+
+    &:hover {
+        background-color: #f1f1ec !important;
+        transition: all 0.4s ease;
+    }
+}
+
+.login-submit {
+    position: absolute;
+    border-radius: 0px !important;
+    box-shadow: 0px 0px transparent !important;
+    bottom: 0px;
+    width: 100%;
+    z-index: 10000;
+    left: 0;
+}

@@ -1,0 +1,12 @@
+﻿{
+  "presets": [
+    [
+      "@babel/env", {
+        "useBuiltIns": false
+      }
+    ],
+  ],
+  "ignore": [
+    "node_modules"
+  ]
+}
