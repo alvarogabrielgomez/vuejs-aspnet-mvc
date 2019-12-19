@@ -57,3 +57,18 @@ siguiente funcion:
 
 Dentro del template ya vienen dos opciones: Cerrar session (F2) y abir menu (M)
 
+Tambien tiene un timeout para cerrar sesion despues de unos segundos dentro de dashboard-layout en la constante Options
+```
+idleTime: 25000
+```
+Cuando llega a estar en idle ejecuta lo siguiente
+```
+        onIdle() {
+            this.idle = true;
+            this.logout();
+        },
+        onActive() {
+            this.idle = false;
+        },
+```
+
